@@ -2,7 +2,7 @@ def part_one():
     current_pos = 50
     direction_to_value = {'L': -1, 'R': 1}
     zero_count = 0
-    with open("D1_Secret_Entrance/sw_solution/input.txt") as f:
+    with open("sw_solution/D1_Secret_Entrance/input.txt") as f:
         data = f.readlines()
     for line in data:
         current_pos += direction_to_value[line[0]] * int(line[1:]) 
@@ -15,7 +15,7 @@ def part_two():
     current_pos = 50
     direction_to_value = {'L': -1, 'R': 1}
     zero_count = 0
-    with open("D1_Secret_Entrance/sw_solution/input.txt") as f:
+    with open("sw_solution/D1_Secret_Entrance/input.txt") as f:
         data = f.readlines()
     for line in data:
         old_pos = current_pos
