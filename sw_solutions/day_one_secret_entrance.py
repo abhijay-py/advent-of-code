@@ -1,18 +1,18 @@
 import os
 
 here = os.path.dirname(os.path.abspath(__file__))
+filename = "d1_input.txt"
 direction_to_value = {'L': -1, 'R': 1}
 
 def get_data():
-    with open(os.path.join(here, "input.txt")) as f:
+    with open(os.path.join(here, filename)) as f:
         data = f.readlines()
     return data
 
 def part_one():
     current_pos = 50
     zero_count = 0
-    with open(os.path.join(here, "input.txt")) as f:
-        data = f.readlines()
+    data = get_data()
     for line in data:
         current_pos += direction_to_value[line[0]] * int(line[1:]) 
         current_pos %= 100
@@ -34,9 +34,12 @@ def part_two():
 
     print(f"New Password: {zero_count}")
 
-def main():
+def day_one_solution():
     part_one()
     part_two()
+
+def main():
+    day_one_solution()
 
 if __name__ == "__main__":
     main()

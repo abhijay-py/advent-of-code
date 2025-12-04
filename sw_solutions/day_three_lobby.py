@@ -1,9 +1,10 @@
 import os
 
 here = os.path.dirname(os.path.abspath(__file__))
+filename = "d3_input.txt"
 
 def get_data():
-    with open(os.path.join(here, "input.txt")) as f:
+    with open(os.path.join(here, filename)) as f:
         data = f.readlines()
     
     data_clean = [entry.strip() for entry in data]
@@ -42,9 +43,12 @@ def part_two():
             total_joltage += max_values[i] * (10 ** (11 - i))    
     print(f"Total Twelve Digit Joltage: {total_joltage}")
 
-def main():
+def day_three_solution():
     part_one()
     part_two()
+
+def main():
+    day_three_solution()
     
 if __name__ == "__main__":
     main()

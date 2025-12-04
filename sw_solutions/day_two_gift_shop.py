@@ -1,9 +1,10 @@
 import os
 
 here = os.path.dirname(os.path.abspath(__file__))
+filename = "d2_input.txt"
 
 def get_pairs():
-    with open(os.path.join(here, "input.txt")) as f:
+    with open(os.path.join(here, filename)) as f:
         data = f.readline().strip().split(',')
     
     pairs = [(j for j in entry.split('-')) for entry in data]
@@ -67,10 +68,7 @@ def part_two():
             for k in range(lower_len, upper_len + 1):
                 if k % seq_len == 0 and k != 1:
                     total_digit_counts.append(k)
-            #print(f"i: {i}, j: {j}, seq_len: {seq_len}, total_digit_counts: {total_digit_counts}")
             if len(total_digit_counts) == 0:
-                #print()
-                #print()
                 continue
             
             for digit_count in total_digit_counts:
@@ -85,28 +83,23 @@ def part_two():
                     current_lower = 10 ** (digit_count - 1) 
                 if (10 ** digit_count - 1) < upper_bound:
                     current_upper = 10 ** digit_count - 1
-                #print(f"current_lower: {current_lower}, current_upper: {current_upper}, lower_bound: {lower_bound}, upper_bound: {upper_bound}, factor: {factor}")
                 lower_multiple = current_lower // factor
                 upper_multiple = current_upper // factor 
-                #print(f"lower_multiple: {lower_multiple}, upper_multiple: {upper_multiple}")
                 for m in range(lower_multiple, upper_multiple + 1):
                     value = m * factor
                     if value >= current_lower and value <= current_upper and value not in values:
                         invalid_id_sum += value
                         values.append(value)
-                        #print()
-                        #print(f"i: {i}, j: {j}")
-                        #print(f"VALUE: {value}")
-                        #print()
                     #iteration_count += 1
-        #print()
-        #print()
     print(f"Sum of Advanced Invalid Gift IDs: {invalid_id_sum}")
     #print(f"Total Iterations: {iteration_count}")
 
-def main():
+def day_two_solution():
     part_one()
     part_two()
+
+def main():
+    day_two_solution()
     
 if __name__ == "__main__":
     main()
