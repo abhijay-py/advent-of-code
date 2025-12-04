@@ -1,5 +1,5 @@
 # --- Day 1: Secret Entrance ---
-## Part 1:
+## Part 1
 The Elves have good news and bad news.
 
 The good news is that they've discovered project management! This has given them the tools they need to prevent their usual Christmas emergency. For example, they now know that the North Pole decorations need to be finished soon so that other critical tasks can start on time.
@@ -60,7 +60,7 @@ Because the dial points at 0 a total of three times during this process, the pas
 
 Analyze the rotations in your attached document. What's the actual password to open the door?
 
-## Part 2:
+## Part 2
 You're sure that's the right password, but the door won't open. You knock, but nobody answers. You build a snowman while you think.
 
 As you're rolling the snowballs for your snowman, you find another security document that must have fallen into the snow:
