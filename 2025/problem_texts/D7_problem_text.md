@@ -1,4 +1,4 @@
-# --- Day 6: Laboratories ---
+# --- Day 7: Laboratories ---
 ## Part 1
 You thank the cephalopods for the help and exit the trash compactor, finding yourself in the familiar halls of a North Pole research wing.
 
