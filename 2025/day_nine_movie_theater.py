@@ -2,6 +2,8 @@ import os, heapq
 from collections import deque
 import time
 
+#TODO DAY 9 PART TWO
+
 here = os.path.dirname(os.path.abspath(__file__))
 filename = "input_files/d9_input.txt"
 
